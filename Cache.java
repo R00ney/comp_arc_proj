@@ -68,10 +68,33 @@ public class Cache {
 		
 	}
 	
-	private readMemory(int address){
+	private readMemory(int address, int tag){
 	
-	}
+	}/// end read mem
 	
+	private writeThrough(int address, int tag){
+	
+	} /// end write through
+	
+	private class Set{
+	
+		public int index;
+		public int controlTag;
+		
+		public Set() {
+		
+		
+		} //end method set
+		
+		public static void main (String[] args_set){
+		
+			Set next_set = new Set();
+		
+		}//end set main
+	
+	
+	
+	}// end class Set
 	
 	
 	
