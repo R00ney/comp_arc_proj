@@ -1,0 +1,29 @@
+// Cache Project (ECE 521)
+// Neal O'Hara
+// ngohara @ ngohara@ncsu.edu
+// 10/4/2013
+
+	//Stream buffer Prefetching
+	// Prefetch is enable or disabled for each cache
+	// has N Stream buffers
+	// Each buffer contains M memory blocks
+	// Each has M valid bits
+	// N = 0 disables prefetch
+	//
+	// cache receives read or write, checks cache and first entry in stream
+	// if miss both, prefetch and replace next X+1 through X+M into stream buffer
+	// no writeback from stream buffer
+	// if hit in stream, allocate X from stream, shift stream and fetch X+M+1
+	// multiple stream buffers are searched in parrallel, with LRU stream being updated
+	// when dirty blocks evicted from cache, that block invalidated in stream buffer
+	
+	
+
+public class PStream{
+
+
+
+
+
+
+}

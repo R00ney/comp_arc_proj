@@ -1,0 +1,8 @@
+11c11
+< trace_file:            ./traces/gcc_trace.txt
+---
+> trace_file:            gcc_trace.txt
+641283c641283
+< e. L1 miss rate:                       0.16002
+---
+> e. L1 miss rate:                       0.160020

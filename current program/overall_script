@@ -1,0 +1,30 @@
+#!/bin/bash
+make clean
+make
+java sim_cache 16 1024 2 0 0 0 0 0 0 gcc_trace.txt > ./output/log_0.txt
+diff -iw ./output/log_0.txt ./correct_outputs/gcc.output0.txt > ./output/diff_0.txt
+nedit ./output/diff_0.txt &
+java sim_cache 16 1024 1 0 0 0 0 0 0 gcc_trace.txt > ./output/log_1.txt
+diff -iw ./output/log_1.txt ./correct_outputs/gcc.output1.txt > ./output/diff_1.txt
+nedit ./output/diff_1.txt &
+java sim_cache 16 1024 2 0 0 8192 4 0 0 gcc_trace.txt > ./output/log_2.txt
+diff -iw ./output/log_2.txt ./correct_outputs/gcc.output2.txt > ./output/diff_2.txt
+nedit ./output/diff_2.txt &
+java sim_cache 16 1024 1 0 0 8192 4 0 0 gcc_trace.txt > ./output/log_3.txt
+diff -iw ./output/log_3.txt ./correct_outputs/gcc.output3.txt > ./output/diff_3.txt
+nedit ./output/diff_3.txt &
+java sim_cache 16 1024 1 1 4 8192 4 0 0 gcc_trace.txt > ./output/log_4.txt
+diff -iw ./output/log_4.txt ./correct_outputs/gcc.output4.txt > ./output/diff_4.txt
+nedit ./output/diff_4.txt &
+java sim_cache 16 1024 1 3 4 8192 4 0 0 gcc_trace.txt > ./output/log_5.txt
+diff -iw ./output/log_5.txt ./correct_outputs/gcc.output5.txt > ./output/diff_5.txt
+nedit ./output/diff_5.txt &
+java sim_cache 16 1024 1 2 4 8192 4 4 4 gcc_trace.txt > ./output/log_6.txt
+diff -iw ./output/log_6.txt ./correct_outputs/gcc.output6.txt > ./output/diff_6.txt
+nedit ./output/diff_6.txt &
+java sim_cache 16 1024 1 0 0 8192 4 3 8 gcc_trace.txt > ./output/log_7.txt
+diff -iw ./output/log_7.txt ./correct_outputs/gcc.output7.txt > ./output/diff_7.txt
+nedit ./output/diff_7.txt &
+java sim_cache 16 1024 64 0 0 4096 256 0 0 gcc_trace.txt > ./output/log_fa.txt
+diff -iw ./output/log_fa.txt ./correct_outputs/gcc.output.fa.txt > ./output/diff_fa.txt
+nedit ./output/diff_fa.txt &

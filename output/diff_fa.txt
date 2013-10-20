@@ -1,0 +1,8 @@
+21c21
+< e. L1 miss rate:                       0.1417
+---
+> e. L1 miss rate:                       0.141700
+30c30
+< n. L2 miss rate:                      0.4961891
+---
+> n. L2 miss rate:                     0.496189
